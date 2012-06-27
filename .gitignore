@@ -3,18 +3,18 @@
 *Db.script
 .settings
 stacktrace.log
-/*.zip
+*.zip
 /plugin.xml
-/*.log
-/*DB.*
-/cobertura.ser
+*.log
+*DB.*
+cobertura.ser
 .DS_Store
-/target/
-/out/
-/web-app/plugins
-/web-app/WEB-INF/classes
+target/
+out/
+web-app/plugins
+web-app/WEB-INF/classes
 
 # STS
-/target-eclipse/
+target-eclipse/
 .project
 .classpath
