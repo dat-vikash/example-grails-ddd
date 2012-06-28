@@ -4,7 +4,7 @@
 .settings
 stacktrace.log
 *.zip
-/plugin.xml
+plugin.xml
 *.log
 *DB.*
 cobertura.ser

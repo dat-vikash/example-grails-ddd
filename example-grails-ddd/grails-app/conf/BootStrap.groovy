@@ -6,8 +6,10 @@ class BootStrap {
 
 	def init = { servletContext ->
 		def adminUser = new User(username: 'admin', password: 'password', enabled: true).save()
-		def powerUser = new User(username: 'power', password: 'password', enabled: true).save()
+		def user = new User(username: 'user', password: 'password', enabled: true).save()
+		def crmUser = new User(username: 'crm', password: 'password', enabled: true).save()
 		def salesUser = new User(username: 'sales', password: 'password', enabled: true).save()
+		def shippingUser = new User(username: 'shipping', password: 'password', enabled: true).save()
 
 		def adminRole = new Role(authority: 'ROLE_ADMIN').save()
 
@@ -22,11 +24,14 @@ class BootStrap {
 		]
 
 		new UserRole(user: adminUser, role: adminRole).save()
-		new UserRole(user: salesUser, role: salesRole).save()
 
 		moduleRoles.each {
-			new UserRole(user: powerUser, role: it).save()
+			new UserRole(user: user, role: it).save()
 		}
+
+		new UserRole(user: crmUser, role: crmRole).save()
+		new UserRole(user: salesUser, role: salesRole).save()
+		new UserRole(user: shippingUser, role: shippingRole).save()
 	}
 
 	def destroy = {

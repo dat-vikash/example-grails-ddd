@@ -1,4 +1,5 @@
 // configuration for plugin testing - will not be included in the plugin zip
+grails.config.defaults.locations = [example.shared.SharedConfig]
 
 log4j = {
 	// Example of changing the log pattern for the default console
@@ -22,8 +23,3 @@ log4j = {
 
 	warn   'org.mortbay.log'
 }
-
-// Added by the Spring Security Core plugin:
-grails.plugins.springsecurity.userLookup.userDomainClassName = 'example.shared.security.User'
-grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'example.shared.security.UserRole'
-grails.plugins.springsecurity.authority.className = 'example.shared.security.Role'

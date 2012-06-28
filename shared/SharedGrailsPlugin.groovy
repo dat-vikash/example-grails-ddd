@@ -53,9 +53,6 @@ Brief summary/description of the plugin.
 	}
 
 	def doWithApplicationContext = { applicationContext ->
-		SpringSecurityUtils.securityConfig.userLookup.userDomainClassName = 'example.shared.security.User'
-		SpringSecurityUtils.securityConfig.userLookup.authorityJoinClassName = 'example.shared.security.UserRole'
-		SpringSecurityUtils.securityConfig.authority.className = 'example.shared.security.Role'
 	}
 
 	def onChange = { event ->

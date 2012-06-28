@@ -10,6 +10,13 @@
 //    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
 // }
 
+// Load module configurations
+grails.config.defaults.locations = [
+	example.shared.SharedConfig,
+	example.crm.CrmConfig,
+	example.sales.SalesConfig,
+	example.shipping.ShippingConfig
+]
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
@@ -106,9 +113,7 @@ log4j = {
 			'net.sf.ehcache.hibernate'
 }
 
-// Always throw a grails.validation.ValidationException if validation fails during a save
-grails.gorm.failOnError=true
-
+// Role hierarchy 
 grails.plugins.springsecurity.roleHierarchy = '''
 ROLE_ADMIN > ROLE_CRM_USER
 ROLE_ADMIN > ROLE_SALES_USER
