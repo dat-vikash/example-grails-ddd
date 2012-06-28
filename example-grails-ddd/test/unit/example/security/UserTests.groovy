@@ -1,4 +1,4 @@
-package example.shared
+package example.security
 
 
 
